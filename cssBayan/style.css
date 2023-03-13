@@ -27,176 +27,121 @@ table{border-collapse:collapse;border-spacing:0}
     background-color: aliceblue;
 }
 
-.text {
-    color: blue;
-    font-size: 1.5rem;
-    font-weight: 700;
-}
-
-.text-button-1 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: aliceblue;
-    -moz-transform: rotate(-90deg);
-    -webkit-transform: rotate(-90deg);
-    -o-transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
-    transform: rotate(-90deg);
-}
-
-.text-button-2 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: aliceblue;
-    -moz-transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-}
-
-.text-button-3 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: aliceblue;
-    -moz-transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-}
-
-.text-button-4 {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: aliceblue;
-    -moz-transform: rotate(-45deg);
-    -webkit-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-    -ms-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-}
-
 .container {
     margin: 0 auto;
     width: calc(100% - 20%);
 }
 
-.container-text {
+.main {
+    height: 130vh;
+}
+
+.bayan-container {
+    flex-direction: column;
     display: flex;
-    justify-content: space-between;
-    padding-top: 1rem;
+    width: 100%;
+}
+
+.img {
+    transition: all 1s;
+    width: 0rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
     padding-bottom: 1rem;
 }
 
 .line {
     width: 100%;
-    border: 1px solid rgb(209, 209, 209);
+    border: 1px solid rgb(207, 206, 206);
 }
 
-.container-img {
-    display: flex;
-    justify-content: center;
+.text {
+    transition: all .5s;
+    color: blue;
+    font-size: 1.5rem;
+    font-weight: 700;
 }
 
-.img-wrap {
-    width: 50%;
-    height: 50%;
-}
-
-.img-1 {
+.container-text {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
     width: 100%;
-    height: 100%;
-    padding-bottom: 1rem;
+    display: flex;
+    justify-content: space-between;
 }
 
-.img-2 {
-    width: 0%;
-    height: 0%;
-    padding-bottom: 1rem;
+.button {
+    display: none;
 }
 
-.img-3 {
-    width: 0%;
-    height: 0%;
-    padding-bottom: 1rem;
+.text-button {
+    font-size: 0rem;
+    transition: all 1s;
 }
 
-.img-4 {
-    width: 0%;
-    height: 0%;
-    padding-bottom: 1rem;
+.button:checked ~ .label .img {
+    width: 20rem;
 }
 
-.container:hover .text-button-1 {
+.button:checked ~ .label .text {
     color: black;
-    transition: 1s;
 }
 
-.container:hover .text-button-2 {
-    color: black;
-    transition: 1s;
+.button:checked ~ .label .text-button {
+    transform: rotate(45deg)
 }
 
-.container:hover .text-button-3 {
-    color: black;
-    transition: 1s;
-}
-
-.container:hover .text-button-4 {
-    color: black;
-    transition: 1s;
+.container:hover .text-button {
+    font-size: 1.5rem;
 }
 
 .container:hover .text {
     color: black;
-    transition: 1s;
 }
 
-.bayan-container-2:hover .img-2 {
-    width: 100%;
-    height: 100%;
-    transition: 1s;
+.label:hover .img {
+    width: 20rem;
 }
 
-.bayan-container-3:hover .img-3 {
-    width: 100%;
-    height: 100%;
-    transition: 1s;
+.label:hover {
+    cursor: pointer;
 }
 
-.bayan-container-4:hover .img-4 {
-    width: 100%;
-    height: 100%;
-    transition: 1s;
+.button:active ~ label .text,
+.button:active ~ label .img {
+    opacity: .5;
 }
 
-.bayan-container-2:hover .text-button-2 {
-    color: black;
-    transition: 1s;
-    -moz-transform: rotate(-90deg);
-    -webkit-transform: rotate(-90deg);
-    -o-transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
-    transform: rotate(-90deg);
+@media (max-width: 821px) {
+    .header-text {
+        font-size: 1.75rem;
+    }
+    .text {
+        font-size: 1.25rem;
+    }
+    .text-button {
+        font-size: 1.25rem;
+    }
 }
 
-.bayan-container-3:hover .text-button-3 {
-    color: black;
-    transition: 1s;
-    -moz-transform: rotate(-90deg);
-    -webkit-transform: rotate(-90deg);
-    -o-transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
-    transform: rotate(-90deg);
+@media (max-width: 421px) {
+    .header-text {
+        font-size: 1.5rem;
+    }
+    .text {
+        font-size: 1rem;
+    }
+    .text-button {
+        font-size: 1rem;
+    }
+    .button:checked ~ .label .img {
+        width: 15rem;
+    }
+    .label:hover .img {
+        width: 15rem;
+    }
 }
 
-.bayan-container-4:hover .text-button-4 {
-    color: black;
-    transition: 1s;
-    -moz-transform: rotate(-90deg);
-    -webkit-transform: rotate(-90deg);
-    -o-transform: rotate(-90deg);
-    -ms-transform: rotate(-90deg);
-    transform: rotate(-90deg);
-}
+
+
