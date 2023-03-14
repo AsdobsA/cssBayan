@@ -104,6 +104,10 @@ table{border-collapse:collapse;border-spacing:0}
     width: 20rem;
 }
 
+.label:hover .text-button {
+    transform: rotate(45deg)
+}
+
 .label:hover {
     cursor: pointer;
 }
