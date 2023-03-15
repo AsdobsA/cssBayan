@@ -95,6 +95,10 @@ table{border-collapse:collapse;border-spacing:0}
 
 
 @media (hover: hover) {
+    .button:active ~ label .text,
+    .button:active ~ label .img {
+        opacity: .5;
+    }
     .container:hover .text-button {
         font-size: 1.5rem;
     }
@@ -110,12 +114,6 @@ table{border-collapse:collapse;border-spacing:0}
     .label:hover {
         cursor: pointer;
     }
-}
-
-.button:active ~ label .text,
-.button:active ~ label .img {
-    opacity: .5;
-    transition: ease-out;
 }
 
 @media (max-width: 821px) {
