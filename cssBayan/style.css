@@ -89,7 +89,8 @@ table{border-collapse:collapse;border-spacing:0}
 }
 
 .button:checked ~ .label .text-button {
-    transform: rotate(45deg)
+    transform: rotate(45deg);
+    font-size: 1.5rem;
 }
 
 
@@ -97,27 +98,15 @@ table{border-collapse:collapse;border-spacing:0}
     .container:hover .text-button {
         font-size: 1.5rem;
     }
-}
-
-@media (hover: hover) {
     .container:hover .text {
         color: black;
     }
-}
-
-@media (hover: hover) {
     .label:hover .img {
         width: 20rem;
     }
-}
-
-@media (hover: hover) {
     .label:hover .text-button {
         transform: rotate(45deg)
     }
-}
-
-@media (hover: hover) {
     .label:hover {
         cursor: pointer;
     }
@@ -126,6 +115,7 @@ table{border-collapse:collapse;border-spacing:0}
 .button:active ~ label .text,
 .button:active ~ label .img {
     opacity: .5;
+    transition: ease-out;
 }
 
 @media (max-width: 821px) {
@@ -138,9 +128,16 @@ table{border-collapse:collapse;border-spacing:0}
     .text-button {
         font-size: 0rem;
     }
+    .button:checked ~ .label .text-button {
+        transform: rotate(45deg);
+        font-size: 1.25rem;
+    }
 }
 
 @media (max-width: 421px) {
+    .button:checked ~ .label .text-button {
+        font-size: 1rem;
+    }
     .header-text {
         font-size: 1.5rem;
     }
