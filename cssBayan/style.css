@@ -81,7 +81,7 @@ table{border-collapse:collapse;border-spacing:0}
 }
 
 .button:checked ~ .label .img {
-    width: 20rem;
+    width: 40rem;
 }
 
 .button:checked ~ .label .text {
@@ -130,9 +130,12 @@ table{border-collapse:collapse;border-spacing:0}
         transform: rotate(45deg);
         font-size: 1.25rem;
     }
+    .button:checked ~ .label .img {
+        width: 30rem;
+    }
 }
 
-@media (max-width: 421px) {
+@media (max-width: 550px) {
     .button:checked ~ .label .text-button {
         font-size: 1rem;
     }
@@ -148,8 +151,8 @@ table{border-collapse:collapse;border-spacing:0}
     .button:checked ~ .label .img {
         width: 15rem;
     }
-    .label:hover .img {
-        width: 15rem;
+    .button:checked ~ .label .img {
+        width: 20rem;
     }
 }
 
