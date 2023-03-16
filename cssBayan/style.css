@@ -1,0 +1,161 @@
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+html{height:100%}
+body{line-height:1}
+ol,ul{list-style:none}
+blockquote,q{quotes:none}
+blockquote:before,blockquote:after,q:before,q:after{content:'';content:none}
+table{border-collapse:collapse;border-spacing:0}
+
+
+.header {
+    padding-top: 2rem;
+    width: 100%;
+    margin: 0 auto;
+    background-color: aliceblue;
+}
+
+.header-text {
+    font-size: 2rem;
+    font-weight: 700;
+    padding-bottom: 1rem;
+}
+
+.main {
+    width: 100%;
+    margin: 0 auto;
+    background-color: aliceblue;
+}
+
+.container {
+    margin: 0 auto;
+    width: calc(100% - 20%);
+}
+
+.main {
+    height: 130vh;
+}
+
+.bayan-container {
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+}
+
+.img {
+    transition: all 1s;
+    width: 0rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+}
+
+.line {
+    width: 100%;
+    border: .1rem solid rgb(207, 206, 206);
+}
+
+.text {
+    transition: all .5s;
+    color: blue;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.container-text {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.button {
+    visibility: hidden;
+}
+
+.text-button {
+    font-size: 0rem;
+    transition: all 1s;
+}
+
+.button:checked ~ .label .img {
+    width: 40rem;
+}
+
+.button:checked ~ .label .text {
+    color: black;
+}
+
+.button:checked ~ .label .text-button {
+    transform: rotate(45deg);
+    font-size: 1.5rem;
+}
+
+
+@media (hover: hover) {
+    .button:active ~ label .text,
+    .button:active ~ label .img {
+        opacity: .5;
+    }
+    .container:hover .text-button {
+        font-size: 1.5rem;
+    }
+    .container:hover .text {
+        color: black;
+    }
+    .label:hover .img {
+        width: 20rem;
+    }
+    .label:hover .text-button {
+        transform: rotate(45deg)
+    }
+    .label:hover {
+        cursor: pointer;
+    }
+}
+
+@media (max-width: 821px) {
+    .header-text {
+        font-size: 1.75rem;
+    }
+    .text {
+        font-size: 1.25rem;
+    }
+    .text-button {
+        font-size: 0rem;
+    }
+    .button:checked ~ .label .text-button {
+        transform: rotate(45deg);
+        font-size: 1.25rem;
+    }
+    .button:checked ~ .label .img {
+        width: 30rem;
+    }
+}
+
+@media (max-width: 550px) {
+    .button:checked ~ .label .text-button {
+        font-size: 1rem;
+    }
+    .header-text {
+        font-size: 1.5rem;
+    }
+    .text {
+        font-size: 1rem;
+    }
+    .text-button {
+        font-size: 0rem;
+    }
+    .button:checked ~ .label .img {
+        width: 15rem;
+    }
+    .button:checked ~ .label .img {
+        width: 20rem;
+    }
+}
+
+
+
